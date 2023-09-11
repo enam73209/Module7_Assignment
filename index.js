@@ -1,4 +1,6 @@
 const app = require('./app');
-app.listen(5500,()=>{
-    console.log("Running Success on "+ 5500);
+const dotenv = require('dotenv');
+dotenv.config({path:'./config.env'});
+app.listen(process.env.RUNNING_PORT,()=>{
+    console.log("Server is Running Successfully on "+ process.env.RUNNING_PORT);
 })
